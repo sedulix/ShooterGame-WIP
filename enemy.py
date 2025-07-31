@@ -5,7 +5,7 @@ import pygame.image
 
 class Skull:
     def __init__(self):
-        self.image = pygame.image.load("resources/skull.png")
+        self.image = pygame.image.load("resources/enemy.png")
         self.width, self.height = 80, 80
         self.x, self.y = randint(0, SCREEN_WIDTH - self.width), 0
         self.step = SKULL_STEP
