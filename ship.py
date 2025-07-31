@@ -4,7 +4,7 @@ import pygame.image
 
 class Ship:
     def __init__(self):
-        self.image = pygame.image.load("resources/ship.png")
+        self.image = pygame.image.load("resources/space_ship.png")
         self.width, self.height = self.image.get_size()
         self.x, self.y = SCREEN_WIDTH / 2 - self.width / 2, SCREEN_HEIGHT - self.height
         self.is_moving_right, self.is_moving_left = False, False
