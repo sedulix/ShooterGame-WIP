@@ -1,9 +1,10 @@
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_COLOR, GAME_CAPTION
-from rocket import Rocket
-from skull import Skull
-from ship import Ship
 import pygame
 import sys
+
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_COLOR, GAME_CAPTION
+from rocket import Rocket
+from enemy import Skull
+from ship import Ship
 
 
 class Game:
@@ -37,18 +38,24 @@ class Game:
 
     def handle_key_events(self, event):
         if event.type == pygame.KEYDOWN:
+
             if event.key == pygame.K_LEFT:
                 self.ship.move_left()
 
             if event.key == pygame.K_RIGHT:
                 self.ship.move_right()
 
+            if event.key == pygame.K_UP:
+                self.ship.move_up()
+
+            if event.key == pygame.K_DOWN:
+                self.ship.move_down()
+
             if event.key == pygame.K_SPACE:
                 self.rocket.fire()
 
         if event.type == pygame.KEYUP:
-            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
-                self.ship.stop_moving()
+            self.ship.stop_moving(event.key)
 
 
     def update_game_state(self):
