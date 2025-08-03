@@ -3,28 +3,21 @@ import pygame.image
 
 
 class Rocket:
-    def __init__(self, ship):
+    def __init__(self, ship_x, ship_y, ship_width):
         self.image = pygame.image.load("resources/rocket.png")
         self.width, self.height = 50, 50
-        self.x, self.y = 0, 0
+        self.x = ship_x + ship_width / 2 - self.width / 2
+        self.y = ship_y - self.height
         self.step = ROCKET_STEP
-        self.was_fired = False
-        self.ship = ship
 
-    def fire(self):
-        self.was_fired = True
-        self.x = self.ship.x + self.ship.width / 2 - self.width / 2
-        self.y = self.ship.y - self.height
 
     def update_position(self):
-        if self.was_fired:
-            self.y -= self.step
+        self.y -= self.step
+
 
     def is_out_of_screen(self):
         return self.y + self.height < 0
 
-    def reset(self):
-        self.was_fired = False
 
     def is_collision(self, skull):
         return (
