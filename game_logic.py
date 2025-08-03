@@ -18,7 +18,10 @@ class Game:
 
         self.ship = Ship()
         self.skull = Skull()
-        self.rocket = Rocket(self.ship)
+
+        self.rockets = []
+        self.last_rocket_time = 0
+        self.rocket_cooldown = 250
 
         self.game_is_running = True
 
@@ -52,7 +55,11 @@ class Game:
                 self.ship.move_down()
 
             if event.key == pygame.K_SPACE:
-                self.rocket.fire()
+                current_time = pygame.time.get_ticks()
+                if current_time - self.last_rocket_time >= self.rocket_cooldown:
+                    new_rocket = Rocket(self.ship.x, self.ship.y, self.ship.width)
+                    self.rockets.append(new_rocket)
+                    self.last_rocket_time = current_time
 
         if event.type == pygame.KEYUP:
             self.ship.stop_moving(event.key)
@@ -61,15 +68,18 @@ class Game:
     def update_game_state(self):
         self.ship.update_position()
         self.skull.update_position()
-        self.rocket.update_position()
 
-        if self.rocket.is_out_of_screen():
-            self.rocket.reset()
+        for rocket in self.rockets[:]:
+            rocket.update_position()
 
-        if self.rocket.is_collision(self.skull):
-            self.rocket.reset()
-            self.skull.reset()
-            self.game_score += 5000
+            if rocket.is_out_of_screen():
+                self.rockets.remove(rocket)
+                continue
+
+            if rocket.is_collision(self.skull):
+                self.rockets.remove(rocket)
+                self.skull.reset()
+                self.game_score += 5000
 
         if self.skull.is_reached_ship(self.ship):
             self.game_is_running = False
@@ -79,8 +89,10 @@ class Game:
         self.screen.fill(SCREEN_COLOR)
         self.screen.blit(self.ship.image, (self.ship.x, self.ship.y))
         self.screen.blit(self.skull.image, (self.skull.x, self.skull.y))
-        if self.rocket.was_fired:
-            self.screen.blit(self.rocket.image, (self.rocket.x, self.rocket.y))
+
+        for rocket in self.rockets:
+            self.screen.blit(rocket.image, (rocket.x, rocket.y))
+
         self.show_game_score()
         pygame.display.update()
 
