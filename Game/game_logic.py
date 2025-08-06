@@ -119,6 +119,8 @@ class Game:
         game_over_rect = game_over_text.get_rect()
         game_over_rect.center = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
         self.screen.blit(game_over_text, game_over_rect)
+        self.sound_manager.play("game_over")
+        
         pygame.display.update()
         pygame.time.wait(3000)
 
