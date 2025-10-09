@@ -1,0 +1,14 @@
+{
+    "SCREEN_WIDTH": 1500,
+    "SCREEN_HEIGHT": 700,
+    "SHIP_STEP": 0.7142857142857143,
+    "DEFAULT_VOLUME": 0.5714285714285714,
+    "SCREEN_COLOR": [
+        255,
+        255,
+        255
+    ],
+    "GAME_CAPTION": "SHOOTER GAME",
+    "ROCKET_STEP": 0.4,
+    "ENEMY_STEP": 0.1
+}
