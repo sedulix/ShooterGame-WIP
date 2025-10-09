@@ -1,4 +1,4 @@
-Welcome to **SHOTER**, an action-packed arcade where reflexes decide your fate.  
+Welcome to **ENEMY-SHOTER**, an action-packed arcade where reflexes decide your fate.  
 Defend yourself from endless waves of enemies! (WIP)  
 If even one enemy reaches the bottom — you’re done for.  
 Each kill makes them faster... ⚡  
