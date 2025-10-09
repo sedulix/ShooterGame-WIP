@@ -9,19 +9,19 @@ Do you have what it takes to beat my record?
 ## 🧭 Project Structure
 
 📂 **assets/**  
-> All the visual and sound content lives here — icons, images, and sound effects that bring the game to life.
+> All the visual and sound content lives here — icons, images, and sound effects that.
 
 📂 **config_handler/**  
-> Core configuration of the game — default settings, screen sizes, controls, and other key parameters that keep the game running smoothly.
+> Core configuration of the game — default settings, screen sizes, controls, and other key parameters.
 
 📂 **drafts/**  
-> Experimental zone! Examples and prototypes of in-game elements like animated buttons, sliders for settings, and other UI tests.
+> Examples and prototypes of in-game elements like animated buttons and sliders for settings.
 
 📂 **game/**  
 > The heart of SHOTER — all gameplay logic, classes, enemy behavior, player mechanics, and the core game loop.
 
 📄 **game_start.py**  
-> The main entry point of the game. Run this file to start playing! 🎮
+> The main entry point of the game. 🎮
 
 📄 **requirements.txt**  
 > A list of dependencies to install before running the game.
