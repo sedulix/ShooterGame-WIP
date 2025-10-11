@@ -11,7 +11,7 @@ CLOCK = pygame.time.Clock()
 FONT = pygame.font.Font(UI_FONT_PATH, 35)
 
 
-# --------------------- ARROW-LOOK BUTTONS ---------------
+# ARROW-LOOK BUTTONS 
 
 
 class ArrowButton:
@@ -84,7 +84,7 @@ class ArrowButton:
         return False
 
 
-# ---------------------- STEP BAR GUI --------------------
+# STEP BAR GUI 
 
 
 class StepBar:
@@ -199,4 +199,5 @@ class Settings:
                 return "BACK"
 
             pygame.display.flip()
+
 
