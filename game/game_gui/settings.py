@@ -126,7 +126,7 @@ class StepBar:
         return self.current
 
 
-# ----------------------- MAIN LOOP -----------------------
+# MAIN LOOP
 
 
 class Settings:
@@ -199,5 +199,6 @@ class Settings:
                 return "BACK"
 
             pygame.display.flip()
+
 
 
