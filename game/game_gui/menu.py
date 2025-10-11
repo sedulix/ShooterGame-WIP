@@ -9,7 +9,7 @@ from config_handler import Config
 
 class Button:
     def __init__(self, content, width, height, pos, elevation, gui_font, screen, is_image = False):
-        # core attributes
+        # CORE ATTRIBUTES
         self.screen = screen
         self.clicked = False
         self.pressed = False
@@ -17,11 +17,11 @@ class Button:
         self.dynamic_elevation = elevation
         self.original_y_pos = pos[1]
 
-        # top rect
+        # TOP RECT
         self.top_rect = pygame.Rect(pos, (width, height))
         self.top_color = "#000000"
 
-        # bottom rect
+        # BOTTOM RECT
         self.bottom_rect = pygame.Rect(pos, (width, elevation))
         self.bottom_color = "#4b251c"
 
@@ -69,7 +69,7 @@ class Button:
         return self.clicked
 
 
-# ------> MENU THING <------
+# MENU THING
 
 
 class Menu:
@@ -118,4 +118,5 @@ class Menu:
                 sys.exit()
 
             pygame.display.flip()
+
 
