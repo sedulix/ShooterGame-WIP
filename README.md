@@ -29,8 +29,9 @@ Do you have what it takes to beat my record?
 
 ---
 
-## Python — core programming language
-Pygame — game engine for rendering, input, and audio
+## 🔧 Tech Stack
+Python — core programming language <br>
+Pygame — game engine for rendering, input, and audio <br>
 OOP architecture — class-based structure (Game, Ship, Enemy, etc.)
 
 ---
