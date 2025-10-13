@@ -29,6 +29,12 @@ Do you have what it takes to beat my record?
 
 ---
 
+## Python — core programming language
+Pygame — game engine for rendering, input, and audio
+OOP architecture — class-based structure (Game, Ship, Enemy, etc.)
+
+---
+
 ## ⚙️ Installation & Run
 Use these commands to get started:
 ```bash
