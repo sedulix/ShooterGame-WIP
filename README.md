@@ -29,15 +29,16 @@ Do you have what it takes to beat my record?
 
 ---
 
-## 🔧 Tech Stack
-Python — core programming language <br>
-Pygame — game engine for rendering, input, and audio <br>
-OOP architecture — class-based structure (Game, Ship, Enemy, etc.)
-
----
-
 ## ⚙️ Installation & Run
 Use these commands to get started:
 ```bash
 pip install -r requirements.txt or pip install pygame
 python game_start.py
+```
+
+---
+
+## 🔧 Tech Stack
+Python — core programming language <br>
+Pygame — game engine for rendering, input, and audio <br>
+OOP architecture — class-based structure (Game, Ship, Enemy, etc.)
