@@ -21,12 +21,6 @@ Do you have what it takes to beat my record?
 📂 **game/**  
 > The heart of SHOTER — all gameplay logic, classes, enemy behavior, player mechanics, and the core game loop.
 
-📄 **game_start.py**  
-> The main entry point of the game. 🎮
-
-📄 **requirements.txt**  
-> A list of dependencies to install before running the game.
-
 ---
 
 ## ⚙️ Installation & Run
