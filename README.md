@@ -41,4 +41,4 @@ python game_start.py
 ## 🔧 Tech Stack
 Python — core programming language <br>
 Pygame — game engine for rendering, input, and audio <br>
-OOP architecture — class-based structure (Game, Ship, Enemy, etc.)
+OOP — architectural paradigm
