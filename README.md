@@ -26,6 +26,7 @@ Do you have what it takes to beat my record?
 ## ⚙️ Installation & Run
 Use these commands to get started:
 ```bash
+git clone https://github.com/sedulix/ShooterGame-WIP
 pip install -r requirements.txt or pip install pygame
 python game_start.py
 ```
